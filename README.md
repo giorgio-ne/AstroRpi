@@ -1,4 +1,4 @@
-# AstroPi
+# AstroRpi
 Script to setup Astropy and Jupyter Notebook on Linux
 
 $ sudo ./AstroRpi
