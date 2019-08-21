@@ -1,7 +1,6 @@
 #!/bin/bash
 
 apt-get update  # To get the latest package lists
-apt-get install libssl-dev
 apt-get install avahi-daemon -y # To set the hostname as AstroPi
 apt-get install virtualenv -y # To install Virtualenv
 apt-get install python3-pip -y # To install python3
