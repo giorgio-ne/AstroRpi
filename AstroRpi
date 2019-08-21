@@ -23,6 +23,24 @@ chown pi: "${JUPYTER_DIR}"/run-jupyter-notebook.sh # Change ownership of jupyter
 VENV=/home/pi/jupyter-env
 virtualenv -q -p python3 $VENV  # To create a python3 Virtualenv
 $VENV//bin/activate 
-$VENV/bin/pip install -r pippkgs1.txt # Install Astropy packages and dependent packages
-$VENV/bin/pip install -r pippkgs2.txt # Install Astropy Affiliated packages
+$VENV/bin/pip install -y numpy
+$VENV/bin/pip install -y pytest
+$VENV/bin/pip install -y scipy
+$VENV/bin/pip install -y h5py
+$VENV/bin/pip install -y beautifulsoup4
+$VENV/bin/pip install -y html5lib
+$VENV/bin/pip install -y bleach
+$VENV/bin/pip install -y pyyaml
+$VENV/bin/pip install -y pandas
+$VENV/bin/pip install -y bintrees
+$VENV/bin/pip install -y sortedcontainers
+$VENV/bin/pip install -y jplephem
+$VENV/bin/pip install -y matplotlib
+$VENV/bin/pip install -y scikit-image
+$VENV/bin/pip install -y setuptools
+$VENV/bin/pip install -y mpmath
+$VENV/bin/pip install -y asdf
+$VENV/bin/pip install -y bottleneck
+$VENV/bin/pip install -y astropy
+$VENV/bin/deactivate
 
