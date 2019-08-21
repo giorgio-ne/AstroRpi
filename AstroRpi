@@ -33,7 +33,7 @@ $VENV/bin/pip install bleach
 $VENV/bin/pip install pyyaml
 $VENV/bin/pip install pandas
 $VENV/bin/pip install bintrees
-$VENV/bin/pip install ortedcontainers
+$VENV/bin/pip install sortedcontainers
 $VENV/bin/pip install jplephem
 $VENV/bin/pip install matplotlib
 $VENV/bin/pip install scikit-image
