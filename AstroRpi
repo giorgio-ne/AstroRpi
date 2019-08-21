@@ -1,0 +1,29 @@
+#!/bin/bash
+
+apt-get update  # To get the latest package lists
+apt-get install libssl-dev
+apt-get install avahi-daemon -y # To set the hostname as AstroPi
+apt-get install virtualenv -y # To install Virtualenv
+apt-get install python3-pip -y # To install python3
+
+JUPYTER_DIR=/home/pi/astropi-notebook
+mkdir -p -v "${JUPYTER_DIR}" # To create the Jupyter home directoryy
+chown pi: "${JUPYTER_DIR}" # Change directory ownership to pi user
+
+touch "${JUPYTER_DIR}"/run-jupyter-notebook.sh # Create jupyter startup script
+cat <<EOF >"${JUPYTER_DIR}"/run-jupyter-notebook.sh # Content of jupyter startup script
+#!/bin/bash
+source /home/pi/jupyter-env/bin/activate
+jupyter notebook --ip 0.0.0.0 --port 9999 --no-browser
+deactivate
+EOF
+
+chmod +x "${JUPYTER_DIR}"/run-jupyter-notebook.sh # Make jupyter startup script executable
+chown pi: "${JUPYTER_DIR}"/run-jupyter-notebook.sh # Change ownership of jupyter startup script to pi user
+
+VENV=/home/pi/jupyter-env
+virtualenv -q -p python3 $VENV  # To create a python3 Virtualenv
+$VENV//bin/activate 
+$VENV/bin/pip install -r pippkgs1.txt # Install first set of Astropy packages
+$VENV/bin/pip install -r pippkgs2.txt # Install second set of Astropy packages
+

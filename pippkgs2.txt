@@ -1,0 +1,10 @@
+
+astroquery
+ccdproc
+photutils
+regions
+imexam
+pyregion
+lightkurve
+jupyter
+
