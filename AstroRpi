@@ -23,24 +23,24 @@ chown pi: "${JUPYTER_DIR}"/run-jupyter-notebook.sh # Change ownership of jupyter
 VENV=/home/pi/jupyter-env
 virtualenv -q -p python3 $VENV  # To create a python3 Virtualenv
 $VENV//bin/activate 
-$VENV/bin/pip install -y numpy
-$VENV/bin/pip install -y pytest
-$VENV/bin/pip install -y scipy
-$VENV/bin/pip install -y h5py
-$VENV/bin/pip install -y beautifulsoup4
-$VENV/bin/pip install -y html5lib
-$VENV/bin/pip install -y bleach
-$VENV/bin/pip install -y pyyaml
-$VENV/bin/pip install -y pandas
-$VENV/bin/pip install -y bintrees
-$VENV/bin/pip install -y sortedcontainers
-$VENV/bin/pip install -y jplephem
-$VENV/bin/pip install -y matplotlib
-$VENV/bin/pip install -y scikit-image
-$VENV/bin/pip install -y setuptools
-$VENV/bin/pip install -y mpmath
-$VENV/bin/pip install -y asdf
-$VENV/bin/pip install -y bottleneck
-$VENV/bin/pip install -y astropy
+$VENV/bin/pip install numpy -y 
+$VENV/bin/pip install pytest -y 
+$VENV/bin/pip install scipy -y 
+$VENV/bin/pip install h5py -y 
+$VENV/bin/pip install beautifulsoup4 -y 
+$VENV/bin/pip install html5lib -y 
+$VENV/bin/pip install bleach -y 
+$VENV/bin/pip install pyyaml -y 
+$VENV/bin/pip install pandas -y 
+$VENV/bin/pip install bintrees -y 
+$VENV/bin/pip install ortedcontainers -y 
+$VENV/bin/pip install jplephem -y 
+$VENV/bin/pip install matplotlib -y 
+$VENV/bin/pip install scikit-image -y 
+$VENV/bin/pip install setuptools -y 
+$VENV/bin/pip install mpmath -y 
+$VENV/bin/pip install asdf -y 
+$VENV/bin/pip install bottleneck -y 
+$VENV/bin/pip install astropy -y 
 $VENV/bin/deactivate
 
