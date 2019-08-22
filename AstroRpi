@@ -22,7 +22,7 @@ chown pi: "${JUPYTER_DIR}"/run-jupyter-notebook.sh # Change ownership of jupyter
 
 VENV=/home/pi/jupyter-env
 virtualenv -q -p python3 $VENV  # To create a python3 Virtualenv
-$VENV//bin/activate 
+source $VENV//bin/activate 
 $VENV/bin/pip install numpy
 $VENV/bin/pip install pytest
 $VENV/bin/pip install scipy
@@ -42,5 +42,5 @@ $VENV/bin/pip install mpmath
 $VENV/bin/pip install asdf
 $VENV/bin/pip install bottleneck
 $VENV/bin/pip install astropy
-$VENV/bin/deactivate
+source $VENV/bin/deactivate
 
