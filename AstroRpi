@@ -6,7 +6,7 @@ apt-get install libatlas-base-dev
 apt-get install virtualenv -y # To install Virtualenv
 apt-get install python3-pip -y # To install python3
 
-JUPYTER_DIR=/home/pi/astropi-notebook
+JUPYTER_DIR=/home/pi/astrorpi-notebook
 mkdir -p -v "${JUPYTER_DIR}" # To create the Jupyter home directoryy
 chown pi: "${JUPYTER_DIR}" # Change directory ownership to pi user
 
